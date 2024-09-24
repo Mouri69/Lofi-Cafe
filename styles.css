@@ -1,0 +1,83 @@
+/* Video Settings */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Set width to 100% of the viewport */
+    height: 100vh; /* Set height to 100% of the viewport */
+    z-index: -1;
+    object-fit: cover; /* Cover the entire viewport without cropping */
+    background-color: black; /* Fills empty space with black */
+}
+
+/* Dark Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+    z-index: 0; /* Make sure this is in front of the video */
+}
+
+/* Content styling */
+.content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* Responsive headings */
+h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+/* Responsive paragraph */
+p {
+    font-size: 1.5em;
+}
+
+/* Style the body to remove scrollbars and set a height */
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional overlay to darken the video */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em; /* Adjust heading size for smaller screens */
+    }
+
+    p {
+        font-size: 1.2em; /* Adjust paragraph size for smaller screens */
+    }
+
+    .content {
+        padding: 15px; /* Reduce padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em; /* Further adjust heading size for mobile */
+    }
+
+    p {
+        font-size: 1em; /* Further adjust paragraph size for mobile */
+    }
+
+    .content {
+        padding: 10px; /* Further reduce padding on mobile */
+    }
+}
